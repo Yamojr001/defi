@@ -1,2 +1,0 @@
-" onclick="addToCart(\'' . htmlspecialchars($row['name']) . '\', document.getElementById(\'quantity-' . $index . '\').value, ' . htmlspecialchars($row['price']) . ', \'' . htmlspecialchars($row['image_path']) . '\')"
-removed from user in the add to cart button

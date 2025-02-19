@@ -58,6 +58,9 @@ if (!$result) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+
+    <?php include'../includes/navadd.php';  ?>
+
     <div class="container mt-5">
         <h2 class="mb-4">Pending Payment Approvals</h2>
 
@@ -106,5 +109,8 @@ if (!$result) {
             <?php endif; ?>
         </div>
     </div>
+    <?php include'../includes/footeradd.php'; ?>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

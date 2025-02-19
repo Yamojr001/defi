@@ -78,7 +78,6 @@ $usersResult = $conn->query($usersQuery);
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            width: 100%; 
         }
         button:hover {
             background-color: #030399; 
@@ -90,21 +89,8 @@ $usersResult = $conn->query($usersQuery);
             color: white;
             margin-top: 20px;
         }
-        .image-upload {
-            display: none; 
-        }
     </style>
-    <script>
-        function toggleImageUpload() {
-            const roleSelect = document.getElementById('role');
-            const imageUploadDiv = document.getElementById('image-upload');
-            if (roleSelect.value === 'owner' || roleSelect.value === 'admin') {
-                imageUploadDiv.style.display = 'block'; // Show image upload
-            } else {
-                imageUploadDiv.style.display = 'none'; // Hide image upload
-            }
-        }
-    </script>
+    
 </head>
 <body>
 
@@ -125,7 +111,7 @@ $usersResult = $conn->query($usersQuery);
                 <input type="password" name="password" class="form-control" placeholder="Password" required>
             </div>
             <div class="input-box">
-                <select id="role" name="role" class="form-control" onchange="toggleImageUpload()" required>
+                <select id="role" name="role" class="form-control"  required>
                     <option value="" disabled selected>---- Select the role for the user you want to create ----</option>
                     <option value="customer care">customer care</option>
                     <option value="admin">Admin</option>
@@ -139,13 +125,15 @@ $usersResult = $conn->query($usersQuery);
             <div class="input-box">
                 <input type="email" name="email" class="form-control" placeholder="Email" required>
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit" style="width: 100%;">Submit</button>
         </form>
     </main>
     
     <!-- footer -->
      <?php include'../includes/footeradd.php'; ?>
     
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 

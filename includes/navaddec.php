@@ -7,27 +7,27 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active text-white" aria-current="page" href="../admin/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="adduser.php">Add Users</a>
+                    <a class="nav-link text-white" href="../admin/adduser.php">Add Users</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="../pay/uploadacc.php">Add Account</a>
                 </li> <li class="nav-item">
-                    <a class="nav-link text-white" href="../ec/additem.php">Add Item</a>
+                    <a class="nav-link text-white" href="additem.php">Add Item</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="viewm.php">View guest message</a>
+                    <a class="nav-link text-white" href="../admin/viewm.php">View guest message</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="approve.php">Approve Payment</a>
+                    <a class="nav-link text-white" href="../admin/approve.php">Approve Payment</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="../ec/admin.php">Manage products</a>
+                    <a class="nav-link text-white" href="admin.php">Manage Project</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="./approve.php">View Payment</a>
+                    <a class="nav-link text-white" href="../admin/approve.php">View Payment</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="../functions/logout.php">Log Out</a>

@@ -34,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     header("Location: ./admin/index.php");
                     exit();
                 case 'user':
+                    $_SESSION["role"] = 'user';
                     header("Location: home.php");
                     exit();
                 default:

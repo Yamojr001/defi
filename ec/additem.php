@@ -1,19 +1,20 @@
 <?php
-//session to verify role
 
-include'../includes/adminsession.php';
+session_start();
 
 // Database connection settings
 include'../includes/config.php';
+//session to verify role
+ include'../includes/adminsession.php';
+
+
 
 // Handle the form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve form data
     $name = $_POST['name'];
     $price = $_POST['price'];
     $description = $_POST['description'];
 
-    // Handle image upload
     $target_dir = "uploads/"; 
 
     // Create the uploads directory if it doesn't exist
@@ -116,7 +117,7 @@ $conn->close();
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            width: 100%; 
+           
         }
         button:hover {
             background-color: #030322;
@@ -126,47 +127,12 @@ $conn->close();
 <body>
 
 
-<nav class="navbar navbar-expand-lg bg-dark mb-4" style="border: 1px solid blue; border-radius: 15px;">
-        <div class="container-fluid">
-            <a class="navbar-brand text-white" href="#">Defi Scam Recovery</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="adduser.php">Add Users</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="../pay/uploadacc.php">Add Account</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="../../trial/admin.html">Staff Management</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="../../trial/admin.html">Approve Payment</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="../../trial/admin.html">View Scam Report</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Order Management</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Log Out</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<?php include'../includes/navadd.php'; ?>
 
     <header>
-        <h1>Add New Product</h1>
+        <h3>Add New Product</h3>
     </header>
-    <div class="container">
+    <div class="container my-3">
         <form action="" method="POST" enctype="multipart/form-data">
             <div class="input-box">
                 <input type="text" name="name" class="form-control" placeholder="Product Name" required>
@@ -180,9 +146,10 @@ $conn->close();
             <div class="input-box">
                 <input type="file" name="image" accept="image/*" class="form-control" required>
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit" style=" width: 100%; ">Submit</button>
         </form>
     </div>
+    <?php include'../includes/footeradd.php'; ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

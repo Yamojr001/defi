@@ -100,12 +100,7 @@ $conn->close();
   
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <title>Document</title>
-  <style>
-    .navbar-toggler {
-        border-color: #030366;
-        background-color: #ffffff;
-      }
-  </style>
+  
 </head>
 <body>
 
